@@ -9,8 +9,7 @@ export function SignUp() {
   const [passwordConfirm, setPasswordConfirm] = useState("")
   const [isLoading, setIsLoading] = useState(false)
 
-
-  function onSubmit(e: React.FormEvent){
+  function onSubmit(e: React.FormEvent) {
     e.preventDefault()
     console.log(name, email, password, passwordConfirm)
   }
@@ -48,9 +47,16 @@ export function SignUp() {
         onChange={(e) => setPasswordConfirm(e.target.value)}
       />
 
-      <Button type="submit" isLoading={isLoading}>Cadastrar</Button>
+      <Button type="submit" isLoading={isLoading}>
+        Cadastrar
+      </Button>
 
-      <a href="/" className="text-sm font-semibold text-gray-100 mt-10 mb-4 text-center hover:text-green-800 transition ease-linear">Já tenho uma conta</a>
+      <a
+        href="/"
+        className="text-sm font-semibold text-gray-100 mt-10 mb-4 text-center hover:text-green-800 transition ease-linear"
+      >
+        Já tenho uma conta
+      </a>
     </form>
   )
 }

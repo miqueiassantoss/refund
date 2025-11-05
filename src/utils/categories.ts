@@ -7,9 +7,9 @@ import accommodationSvg from "../assets/accommodation.svg"
 export const CATEGORIES = {
   food: {
     name: "Alimentação",
-    icone: foodSvg
+    icone: foodSvg,
   },
-  
+
   others: {
     name: "Outros",
     icone: othersSvg,
@@ -27,8 +27,10 @@ export const CATEGORIES = {
 
   accomodationSvg: {
     name: "Acomodação",
-    icone: accommodationSvg
-  }
+    icone: accommodationSvg,
+  },
 }
 
-export const CATEGORIES_KEYS = Object.keys(CATEGORIES) as Array <keyof typeof CATEGORIES>
+export const CATEGORIES_KEYS = Object.keys(CATEGORIES) as Array<
+  keyof typeof CATEGORIES
+>

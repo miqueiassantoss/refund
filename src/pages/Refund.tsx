@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { useNavigate, useParams } from "react-router"
-
 import fileSvg from "../assets/file.svg"
 import { CATEGORIES, CATEGORIES_KEYS } from "../utils/categories"
 import { Input } from "../components/Input"
@@ -73,7 +72,11 @@ export function Refund() {
       </div>
 
       {params.id ? (
-        <a href="https://www.rocketseat.com.br/" target="_blank" className="text-sm text-green-100 font-semibold flex items-center justify-center gap-2 my-6 hover:opacity-70 transition ease-linear">
+        <a
+          href="https://www.rocketseat.com.br/"
+          target="_blank"
+          className="text-sm text-green-100 font-semibold flex items-center justify-center gap-2 my-6 hover:opacity-70 transition ease-linear"
+        >
           <img src={fileSvg} alt="ícone do arquivo" />
           Abrir Comprovante
         </a>

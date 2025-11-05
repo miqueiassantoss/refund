@@ -1,7 +1,5 @@
-import { Routes } from "./routes";
+import { Routes } from "./routes"
 
-export function App(){
-  return (
-    <Routes/>
-  )
+export function App() {
+  return <Routes />
 }

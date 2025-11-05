@@ -1,6 +1,5 @@
 import leftSvg from "../assets/left.svg"
 import rightSvg from "../assets/right.svg"
-
 import { Button } from "./Button"
 
 type Props = {

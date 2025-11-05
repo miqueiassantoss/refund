@@ -6,12 +6,11 @@ import type { RefundItemProps } from "../components/RefundItem"
 import { CATEGORIES } from "../utils/categories"
 import { formatCurrency } from "../utils/formatCurrency"
 import { Pagination } from "../components/Pagination"
-
 import searchSvg from "../assets/search.svg"
 
 const REFUND_EXAMPLE = {
   id: "123",
-  name: "Mike",
+  name: "Miqueias",
   category: "Transporte",
   amount: formatCurrency(34.5),
   categoryImg: CATEGORIES["transport"].icone,
@@ -43,7 +42,6 @@ export function Dashboard() {
 
   return (
     <div className="bg-gray-500 rounded-xl p-10 md:min-w-[768px]">
-
       <h1 className="text-gray-100 font-bold text-xl flex-1">Solicitações</h1>
 
       <form
@@ -61,11 +59,9 @@ export function Dashboard() {
       </form>
 
       <div className="my-6 flex flex-col gap-4 max-h-[342px] overflow-y-scroll">
-        {
-          refunds.map((item) => (
-            <RefundItem key={item.id} data={item} href={`/refund/${item.id}`}/>
-          ))
-        }
+        {refunds.map((item) => (
+          <RefundItem key={item.id} data={item} href={`/refund/${item.id}`} />
+        ))}
       </div>
 
       <Pagination
