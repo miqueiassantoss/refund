@@ -18,7 +18,7 @@ const session = {
 
 export function Routes() {
   const context = useAuth()
-  console.log(context)
+  console.log(context.session?.user.name)
 
   function Route() {
     switch (session.user.role) {

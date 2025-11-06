@@ -1,15 +1,17 @@
+import { useState } from "react"
 import { createContext } from "react"
 import type { ReactNode } from "react"
 
-export const AuthContext = createContext({})
+type AuthContext = {
+  session: null | UserAPIResponse
+}
 
-export function AuthProvider({children}: {children: ReactNode}) {
+export const AuthContext = createContext({} as AuthContext)
+
+export function AuthProvider({ children }: { children: ReactNode }) {
+  const [session, setSession] = useState<null | UserAPIResponse>(null)
+
   return (
-    <AuthContext.Provider
-      value={{ name: "Mike", email: "miqueias@email.com" }}
-    >
-      {children}
-
-    </AuthContext.Provider>
+    <AuthContext.Provider value={{ session }}>{children}</AuthContext.Provider>
   )
 }

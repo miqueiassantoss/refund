@@ -4,6 +4,7 @@ import { Button } from "../components/Button"
 import { z, ZodError } from "zod"
 import { api } from "../services/api"
 import { AxiosError } from "axios"
+import { useAuth } from "../hooks/useAuth"
 
 const signInSchema = z.object({
   email: z.email({ message: "O e-mail é invalido" }),
@@ -21,7 +22,9 @@ export function SignIn() {
       })
 
       const response = await api.post("/sessions", data)
-      console.log(response.data)
+      // console.log(response.data)
+      const context = useAuth()
+      console.log(context.session?.user.name)
 
     } catch (error) {
       console.log(error)
