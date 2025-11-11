@@ -7,27 +7,27 @@ import accommodationSvg from "../assets/accommodation.svg"
 export const CATEGORIES = {
   food: {
     name: "Alimentação",
-    icone: foodSvg,
+    icon: foodSvg,
   },
 
   others: {
     name: "Outros",
-    icone: othersSvg,
+    icon: othersSvg,
   },
 
   services: {
     name: "Serviços",
-    icone: servicesSvg,
+    icon: servicesSvg,
   },
 
   transport: {
     name: "Transporte",
-    icone: transportSvg,
+    icon: transportSvg,
   },
 
-  accomodationSvg: {
+  accommodation: {
     name: "Acomodação",
-    icone: accommodationSvg,
+    icon: accommodationSvg,
   },
 }
 
